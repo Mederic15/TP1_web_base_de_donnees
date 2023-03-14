@@ -5,21 +5,21 @@ import NouveauProfesseur from "../components/NouveauProfesseur";
 function Professeurs() {
   const professeurs = [
     {
-      id: "u1",
+      id: "p1",
       nom: "Sylvain Labranche",
       image:
         "https://www.chumontreal.qc.ca/sites/default/files/guy-pare_5.jpeg",
       cours: ["Web et bases de données", <br></br>, "Base de données"],
     },
     {
-      id: "u2",
+      id: "p2",
       nom: "Simon Deschêne",
       image:
         "https://www.chumontreal.qc.ca/sites/default/files/guy-pare_5.jpeg",
       cours: ["Objets connectés", <br></br>, "Interface utilisateur"],
     },
     {
-      id: "u3",
+      id: "p3",
       nom: "Mathieu Bergeron",
       image:
         "https://www.chumontreal.qc.ca/sites/default/files/guy-pare_5.jpeg",
@@ -30,7 +30,7 @@ function Professeurs() {
       ],
     },
     {
-      id: "u4",
+      id: "p4",
       nom: "Nathalie Desmangle",
       image:
         "https://www.chumontreal.qc.ca/sites/default/files/guy-pare_5.jpeg",

@@ -12,6 +12,8 @@ import PlacesUtilisateur from "./places/pages/PlacesUtilisateur";
 import Accueil from "./Accueil/Accueil";
 import PageAccueil from "./Accueil/pageAccueil/page_accueil";
 import Professeurs from "./professeurs/pages/Professeurs";
+import Cours from "./cours/pages/Cours";
+import CourSelectionne from "./cours/pages/CourSelectionne";
 
 function App() {
   return (
@@ -23,10 +25,13 @@ function App() {
             <PageAccueil />
           </Route>
           <Route path="/Professeurs" exact>
-              <Professeurs />
+            <Professeurs />
           </Route>
-          <Route path="/PlacesUtilisateur" exact>
-            <PlacesUtilisateur />
+          <Route path="/Cours" exact>
+            <Cours />
+          </Route>
+          <Route path="/Cours/:idCours" exact>
+            <CourSelectionne />
           </Route>
           <Redirect to="/Accueil" />
         </Switch>

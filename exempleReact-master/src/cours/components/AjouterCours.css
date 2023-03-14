@@ -1,0 +1,33 @@
+.formulaire-cours {
+    margin: 2rem auto;
+    max-width: 40rem;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .formulaire-cours label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .formulaire-cours input,
+  .formulaire-cours select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .formulaire-cours button[type="submit"] {
+    background-color: #0077cc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+  
