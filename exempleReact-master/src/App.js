@@ -27,7 +27,7 @@ function App() {
           <Route path="/PlacesUtilisateur" exact>
             <PlacesUtilisateur />
           </Route>
-          <Redirect to="/" />
+          <Redirect to="/Accueil" />
         </Switch>
       </main>
     </Router>

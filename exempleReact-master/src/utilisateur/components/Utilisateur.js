@@ -18,8 +18,7 @@ function Utilisateur({ utilisateur }) {
             <div className="user-item__info">
               <h2>{utilisateur.nom}</h2>
               <h3>
-                {utilisateur.places}{" "}
-                {utilisateur.places < 2 ? "place" : "places"}
+                {utilisateur.cours}{" "}
               </h3>
             </div>
           </Link>
@@ -27,5 +26,7 @@ function Utilisateur({ utilisateur }) {
     </li>
   );
 }
+
+
 
 export default Utilisateur;
