@@ -59,31 +59,6 @@ function NouveauProf({ onAjouterProf }) {
           onChange={(event) => setPhoto(event.target.value)}
         />
       </div>
-      <div>
-        <label htmlFor="cours">Cours :</label>
-        <select
-          id="cours"
-          value={cours}
-          onChange={(event) => setCours([...cours, event.target.value])}
-        >
-          <option value="">-- Sélectionner un cours --</option>
-          <option value="Web et bases de données">
-            Web et bases de données
-          </option>
-          <option value="Base de données">Base de données</option>
-          <option value="Objets connectés">Objets connectés</option>
-          <option value="Interface utilisateur">Interface utilisateur</option>
-          <option value="Environnement graphique client">
-            Environnement graphique client
-          </option>
-          <option value="Structure de données">Structure de données</option>
-          <option value="Interface web">Interface web</option>
-          <option value="Français">Français</option>
-        </select>
-        <button type="button" onClick={() => setCours([...cours, ""])}>
-          Ajouter un cours
-        </button>
-      </div>
       <button type="submit">Ajouter le professeur</button>
     </form>
   );

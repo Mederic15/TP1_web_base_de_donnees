@@ -1,9 +1,9 @@
 import React from "react";
-import ListeUtilisateurs from "../components/ListeUtilisateurs";
+import ListeProfesseurs from "../components/ListeProfesseurs";
 import NouveauProfesseur from "../components/NouveauProfesseur";
 
-function Utilisateurs() {
-  const utilisateurs = [
+function Professeurs() {
+  const professeurs = [
     {
       id: "u1",
       nom: "Sylvain Labranche",
@@ -40,10 +40,10 @@ function Utilisateurs() {
 
   return (
     <div>
-      <ListeUtilisateurs utilisateurs={utilisateurs} />
+      <ListeProfesseurs professeurs={professeurs} />
       <NouveauProfesseur />
     </div>
   );
 }
 
-export default Utilisateurs;
+export default Professeurs;

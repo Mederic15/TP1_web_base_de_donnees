@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 import Avatar from "../../shared/Avatar";
 import Card from "../../shared/Card";
 
-import "./Utilisateur.css";
+import "./Professeur.css";
 
-function Utilisateur({ utilisateur }) {
+function Professeur({ professeur }) {
   return (
     <li className="user-item">
         <Card className="user-item__content">
-          <Link to={`/${utilisateur.id}/places`}>
+          <Link to={`/${professeur.id}/places`}>
             <div className="user-item__image">
-              <Avatar image={utilisateur.image} alt={utilisateur.nom} />
+              <Avatar image={professeur.image} alt={professeur.nom} />
             </div>
 
             <div className="user-item__info">
-              <h2>{utilisateur.nom}</h2>
+              <h2>{professeur.nom}</h2>
               <h3>
-                {utilisateur.cours}{" "}
+                {professeur.cours}{" "}
               </h3>
             </div>
           </Link>
@@ -29,4 +29,4 @@ function Utilisateur({ utilisateur }) {
 
 
 
-export default Utilisateur;
+export default Professeur;

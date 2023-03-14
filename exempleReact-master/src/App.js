@@ -5,12 +5,13 @@ import {
   Redirect,
   Switch,
 } from "react-router-dom";
-import Utilisateurs from "./utilisateur/pages/Utilisateurs";
+
 import NouvellePlace from "./places/pages/NouvellePlace";
 import MainNavigation from "./shared/Navigation/MainNavigation";
 import PlacesUtilisateur from "./places/pages/PlacesUtilisateur";
 import Accueil from "./Accueil/Accueil";
 import PageAccueil from "./Accueil/pageAccueil/page_accueil";
+import Professeurs from "./professeurs/pages/Professeurs";
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
           <Route path="/Accueil" exact>
             <PageAccueil />
           </Route>
-          <Route path="/Utilisateurs" exact>
-              <Utilisateurs />
+          <Route path="/Professeurs" exact>
+              <Professeurs />
           </Route>
           <Route path="/PlacesUtilisateur" exact>
             <PlacesUtilisateur />
