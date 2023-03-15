@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ListeCours from "../components/ListeCours";
 import AjouterCours from "../components/AjouterCours";
 
-function Cours(cours, setCours) {
+function Cours({ cours, setCours }) {
   
 
   const ajouterCoursHandler = (nouveauCours) => {
@@ -12,10 +12,10 @@ function Cours(cours, setCours) {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <AjouterCours onAjouterCours={ajouterCoursHandler} />
       <ListeCours cours={cours} />
-    </div>
+    </React.Fragment>
   );
 }
 

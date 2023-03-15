@@ -39,8 +39,17 @@ function App() {
       nbMaxEtudiants: "20",
       dateDebut: "2023-01-23",
       dateFin: "2023-05-19",
+      professeur: "Simon Deschêne",
+      etudiants: [{
+        prenom: "Médéric",
+        nom: "Bélec",
+        numAdmission: "1"
+      }],
     },
   ]);
+  
+
+  
   return (
     <Router>
       <MainNavigation />
@@ -56,7 +65,7 @@ function App() {
             <Cours cours={cours} setCours={setCours}/>
           </Route>
           <Route path="/cours/:idCours" exact>
-            <CourSelectionne  cours={cours}/>
+            <CourSelectionne  cours={cours} setCours={setCours}/>
           </Route>
           <Redirect to="/Accueil" />
         </Switch>

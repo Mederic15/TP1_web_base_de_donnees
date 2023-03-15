@@ -18,7 +18,7 @@ function AjouterCours(props) {
       dateDebut: dateDebut,
       dateFin: dateFin,
     };
-    props.onAddCours(newCours);
+    props.onAjouterCours(newCours);
     setTitre("");
     setDiscipline("");
     setNbMaxEtudiants("");
@@ -101,7 +101,7 @@ function AjouterCours(props) {
           />
         </div>
         <div className="form-actions">
-          <button type="submit">Ajouter</button>
+          <button type="submit">Ajouter un cours</button>
         </div>
       </form>
     </Card>

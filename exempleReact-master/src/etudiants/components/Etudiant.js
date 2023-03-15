@@ -4,12 +4,16 @@ import Card from "../../shared/Card";
 
 function Etudiant({ etudiant }) {
   return (
-    <li className="etudiant-item">
+    
       <Card>
-        <h2>{etudiant.prenom + " " + etudiant.nom}</h2>
-        <h3>{etudiant.numero}</h3>
+        <h2>Étudiants inscrits aux cours : </h2>
+        <li>
+          <h3>{etudiant.prenom + " " + etudiant.nom}</h3>
+          <h4>numéro d'étudiant : {etudiant.numAdmission}</h4>
+        </li>
       </Card>
-    </li>
+      
+    
   );
 }
 
