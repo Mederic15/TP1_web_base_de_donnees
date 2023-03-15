@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import ListeEtudiants from "../../etudiants/components/ListeEtudiants";
+import NouvelEtudiant from "../components/NouvelEtudiant";
 
-function CourSelect({ cours }) {
-  const idCours = useParams().idCours;
-  var cour = cours.filter((cour) => cour.id === idCours);
-  cour = cour[0];
+function CourSelectionne({ cours, setCours }) {
+  const { idCours } = useParams().idCours;
+  const coursSelectionne = cours.find((c) => c.idCours === idCours);
+
+  function ajouterEtudiant(nouvelEtudiant) {
+    const updatedCours = cours.map((c) => {
+      if (c.idCours === idCours) {
+        return { ...c, etudiants: [...c.etudiants, nouvelEtudiant] };
+      }
+      return c;
+    });
+
+    setCours(updatedCours);
+  }
+  console.log({coursSelectionne})
   return (
     <React.Fragment>
-      <h3>{cour.titre}</h3>
-      <ul>
-        <li>discipline: {cour.discipline}</li>
-        <li>Nombre de places maximum: {cour.placesMax}</li>
-        <li>Date de début: {cour.dateDebut}</li>
-        <li>Date de fin: {cour.dateFin}</li>
-        <li>Nom du professeur: {cour.prof}</li>
-      </ul>
+      <ListeEtudiants etudiants={coursSelectionne.etudiants} />
+      <NouvelEtudiant ajouterEtudiant={ajouterEtudiant} />
     </React.Fragment>
   );
 }
 
-export default CourSelect;
+export default CourSelectionne;

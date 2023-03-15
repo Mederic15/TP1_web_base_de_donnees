@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +16,31 @@ import Cours from "./cours/pages/Cours";
 import CourSelectionne from "./cours/pages/CourSelectionne";
 
 function App() {
+
+  const [cours, setCours] = useState([
+    {
+      idCours: "c1",
+      titre: "Web et bases de données",
+      discipline: "Informatique",
+      nbMaxEtudiants: "30",
+      dateDebut: "2023-01-23",
+      dateFin: "2023-05-19",
+      professeur: "Sylvain Labranche",
+      etudiants: [{
+        prenom: "Médéric",
+        nom: "Bélec",
+        numAdmission: "1"
+      }],
+    },
+    {
+      idCours: "c2",
+      titre: "Objets connectés",
+      discipline: "Informatique",
+      nbMaxEtudiants: "20",
+      dateDebut: "2023-01-23",
+      dateFin: "2023-05-19",
+    },
+  ]);
   return (
     <Router>
       <MainNavigation />
@@ -28,10 +53,10 @@ function App() {
             <Professeurs />
           </Route>
           <Route path="/Cours" exact>
-            <Cours />
+            <Cours cours={cours} setCours={setCours}/>
           </Route>
-          <Route path="/Cours/:idCours" exact>
-            <CourSelectionne />
+          <Route path="/cours/:idCours" exact>
+            <CourSelectionne  cours={cours}/>
           </Route>
           <Redirect to="/Accueil" />
         </Switch>
