@@ -19,6 +19,8 @@
   color: #292929;
   text-decoration: none;
   padding: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links a:hover,
@@ -36,6 +38,8 @@
   background: transparent;
   padding: 0.5rem;
   font: inherit;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links button:focus {

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './NouveauProfesseur.css';
 
 function NouveauProf({ NouveauProf }) {
   const [nom, setNom] = useState("");

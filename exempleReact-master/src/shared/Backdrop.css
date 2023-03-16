@@ -1,9 +1,17 @@
+/* Définir les styles pour l'élément backdrop */
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 100%); /* Ajouter un dégradé pour un effet plus dynamique */
   z-index: 10;
+  opacity: 0; /* Ajouter une transparence initiale pour un effet de transition plus doux */
+  transition: opacity 0.3s ease; /* Ajouter une transition pour un effet de transition plus doux */
+}
+
+/* Ajouter un effet de transition pour l'élément backdrop */
+.backdrop.active {
+  opacity: 1;
 }

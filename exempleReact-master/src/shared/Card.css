@@ -1,9 +1,12 @@
+/* Définir les styles pour l'élément card */
 .card {
   position: relative;
   margin: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 6px;
-  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Ajouter une ombre plus douce et plus prononcée pour un effet plus dynamique */
+  border-radius: 12px; /* Augmenter la taille du rayon de bordure pour un effet plus doux */
+  padding: 1.5rem;
   overflow: hidden;
-  background: white;
+  background: #5b5656; /* Ajouter une couleur de fond plus claire pour un effet plus doux */
+  transition: box-shadow 0.3s ease; /* Ajouter une transition pour l'ombre de la carte pour un effet de transition plus doux */
+  font-size: 0.8rem; /* Rendre le texte plus petit */
 }

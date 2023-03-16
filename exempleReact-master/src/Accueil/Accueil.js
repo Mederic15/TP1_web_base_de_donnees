@@ -1,8 +1,9 @@
 import React from "react";
+import './Accueil.css';
 
 const Accueil = () => {
   return (
-    <div>
+    <div className="container">
       <h1>Application du collège</h1>
       <p>Bienvenue dans l'application de gestion d'inscriptions de notre collège !</p>
       <p>Utilisez le menu de navigation pour accéder aux différentes fonctionnalités de l'application.</p>

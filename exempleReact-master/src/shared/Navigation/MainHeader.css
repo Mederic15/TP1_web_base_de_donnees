@@ -1,23 +1,30 @@
+/* Définir les styles pour l'élément header */
 .main-header {
   width: 100%;
-  height: 4rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Utiliser la propriété justify-content pour centrer les éléments horizontalement et ajouter de l'espace entre les éléments */
   position: fixed;
   top: 0;
   left: 0;
-  background: #ff0055;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
-  padding: 0 1rem;
-  z-index: 5;
+  background: linear-gradient(to right, #f953c6, #b91d73); /* Utiliser un dégradé de couleurs pour un effet plus dynamique */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Ajouter une ombre plus douce et plus prononcée pour un effet plus dynamique */
+  padding: 0 2rem;
+  z-index: 10;
 }
 
+/* Ajouter un effet de transition pour l'ombre de l'en-tête */
+.main-header:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajouter un effet de transition pour la couleur de fond de l'en-tête */
+.main-header:hover {
+  background: linear-gradient(to right, #fa8c8c, #ba5370);
+}
+
+/* Définir les styles pour l'élément main */
 main {
-  margin-top: 5rem;
-}
-
-@media (min-width: 768px) {
-  .main-header {
-    justify-content: space-between;
-  }
+  margin-top: 6.5rem; /* Augmenter la marge pour donner de l'espace à l'en-tête */
 }
